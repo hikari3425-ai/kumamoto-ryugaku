@@ -87,9 +87,33 @@
     .footer-links a { font-size: .85rem; color: rgba(255,255,255,.55); transition: color .2s; }
     .footer-links a:hover { color: var(--white); }
     .footer-copy { font-size: .78rem; color: rgba(255,255,255,.35); width: 100%; text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.08); margin-top: 16px; }
+    .prog-banner { background: var(--pri); border-radius: 16px; padding: 36px 40px; color: var(--white); margin-top: 36px; }
+    .prog-banner-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+    .prog-banner-item { border-left: 3px solid var(--acc); padding-left: 16px; }
+    .prog-banner-label { font-size: .72rem; font-weight: 700; color: rgba(255,255,255,.6); letter-spacing: .1em; margin-bottom: 4px; }
+    .prog-banner-val { font-size: 1rem; font-weight: 800; color: var(--white); line-height: 1.4; }
+    .prog-banner-note { font-size: .8rem; color: rgba(255,255,255,.65); margin-top: 2px; }
+    .components-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 16px; margin-top: 36px; }
+    .component-card { border: 1px solid var(--border); border-radius: 12px; padding: 24px; display: flex; gap: 20px; align-items: flex-start; }
+    .component-num { font-size: 1.6rem; font-weight: 900; color: var(--acc); flex-shrink: 0; line-height: 1; min-width: 32px; }
+    .component-body { flex: 1; }
+    .component-title { font-size: 1rem; font-weight: 800; color: var(--pri); margin-bottom: 6px; }
+    .component-desc { font-size: .88rem; color: var(--sub); line-height: 1.65; }
+    .schedule-table { width: 100%; border-collapse: collapse; margin-top: 28px; }
+    .schedule-table th, .schedule-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border); font-size: .9rem; }
+    .schedule-table th { background: var(--bg1); font-weight: 700; color: var(--pri); }
+    .schedule-table td { color: var(--txt); }
+    .schedule-table tr:last-child td { border-bottom: none; }
+    .price-box { background: var(--bg2); border: 2px solid var(--acc); border-radius: 12px; padding: 24px 28px; margin-top: 28px; }
+    .price-box-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(244,162,97,.2); font-size: .95rem; }
+    .price-box-row:last-child { border-bottom: none; font-weight: 800; color: var(--pri); }
+    .price-box-label { color: var(--sub); }
+    .price-box-val { font-weight: 700; color: var(--txt); }
     @media (max-width: 768px) {
       #header { padding: 0 24px; } .nav-links, .header-ctas { display: none; } .hamburger { display: flex; }
       .sec { padding: 56px 24px; } .facts-grid { grid-template-columns: repeat(2, 1fr); } .features-grid, .prog-grid { grid-template-columns: 1fr; }
+      .prog-banner { padding: 24px 20px; } .prog-banner-grid { grid-template-columns: 1fr; gap: 16px; }
+      .component-card { flex-direction: column; gap: 8px; }
     }
   </style>
 </head>
@@ -126,33 +150,78 @@
   <div class="hero-content">
     <p class="breadcrumb"><a href="index.html">TOP</a> &gt; <a href="index.html#programs">国から探す</a> &gt; ダナン</p>
     <div class="country-flag-big">🇻🇳</div>
-    <h1 class="country-h1">ダナン留学</h1>
-    <p class="country-catch">アジア注目の新興リゾート都市。英語×インターン機会が豊富。</p>
+    <h1 class="country-h1">ダナン Wellbeing留学</h1>
+    <p class="country-catch">自分を知り、自分らしい人生を設計する2週間。</p>
   </div>
 </section>
 
 <section class="sec" style="background:var(--bg1);">
   <div class="sec-inner">
-    <div class="sec-tag">QUICK FACTS</div>
-    <h2 class="sec-title">ダナンってどんな場所？</h2>
-    <div class="facts-grid">
-      <div class="fact-box"><div class="fact-icon">💰</div><div class="fact-label">2週間の費用目安</div><div class="fact-val">12〜18万円</div></div>
-      <div class="fact-box"><div class="fact-icon">📅</div><div class="fact-label">おすすめ期間</div><div class="fact-val">2〜6週間</div></div>
-      <div class="fact-box"><div class="fact-icon">💼</div><div class="fact-label">特徴</div><div class="fact-val">インターン機会豊富</div><div class="fact-sub">成長中のビジネス都市</div></div>
-      <div class="fact-box"><div class="fact-icon">🌊</div><div class="fact-label">ロケーション</div><div class="fact-val">ビーチリゾート</div><div class="fact-sub">美しい海岸線</div></div>
+    <div class="sec-tag">PROGRAM OVERVIEW</div>
+    <h2 class="sec-title">ダナン Wellbeing留学とは？</h2>
+    <p class="sec-lead">ベトナム・ダナンで行う2週間の特別プログラム。「英語を学ぶ」だけでなく、自己分析・起業家精神・SNS発信・インターン体験など多彩なコンテンツで、"自分らしい生き方"を発見することを目的としています。</p>
+    <div class="prog-banner">
+      <p style="font-size:.75rem;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.6);">主催</p>
+      <p style="font-size:1.1rem;font-weight:800;margin-top:4px;">株式会社WABITABI × くまもと留学室</p>
+      <div class="prog-banner-grid">
+        <div class="prog-banner-item">
+          <div class="prog-banner-label">対象</div>
+          <div class="prog-banner-val">18〜25歳の女性</div>
+        </div>
+        <div class="prog-banner-item">
+          <div class="prog-banner-label">期間</div>
+          <div class="prog-banner-val">2週間</div>
+          <div class="prog-banner-note">年2回（夏・春）開催</div>
+        </div>
+        <div class="prog-banner-item">
+          <div class="prog-banner-label">次回開催</div>
+          <div class="prog-banner-val">2026年8月26日（水）〜9月8日（火）</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sec" style="background:var(--white);">
   <div class="sec-inner">
-    <div class="sec-tag">FEATURES</div>
-    <h2 class="sec-title">ダナン留学の魅力</h2>
-    <div class="features-grid">
-      <div class="feature-card"><div class="feature-icon">🏙️</div><div class="feature-title">アジア注目の新興リゾート都市</div><p class="feature-body">近年急成長を遂げているダナンは、美しいビーチと近代的な都市インフラが融合したアジアで最も注目されている都市の一つ。活気ある環境で留学できます。</p></div>
-      <div class="feature-card"><div class="feature-icon">💸</div><div class="feature-title">圧倒的なコストパフォーマンス</div><p class="feature-body">ベトナムの物価の安さはアジアトップクラス。2週間12〜18万円で学費・宿泊・食費をまかなえます。留学費用を最小限に抑えながら充実した体験を。</p></div>
-      <div class="feature-card"><div class="feature-icon">💼</div><div class="feature-title">インターン機会が豊富</div><p class="feature-body">ダナンには外資系企業や急成長中のスタートアップが多数集まっています。語学学習と並行して、海外インターンシップに挑戦できるのがダナン最大の特徴。</p></div>
-      <div class="feature-card"><div class="feature-icon">🌏</div><div class="feature-title">ベトナムの文化と歴史を体験</div><p class="feature-body">古都ホイアンや世界遺産ミーソン遺跡も日帰り圏内。ベトナムの豊かな歴史・食文化を楽しみながら、アジアの今を肌で感じられる場所です。</p></div>
+    <div class="sec-tag">PROGRAM CONTENTS</div>
+    <h2 class="sec-title">5つのプログラムコンテンツ</h2>
+    <div class="components-grid">
+      <div class="component-card">
+        <div class="component-num">01</div>
+        <div class="component-body">
+          <div class="component-title">ライフデザイン</div>
+          <p class="component-desc">自分軸を育てる3段階ワーク。「自己分析」→「価値観ワーク」→「最終プレゼン」のステップで、自分が本当に大切にしたいことを言語化します。</p>
+        </div>
+      </div>
+      <div class="component-card">
+        <div class="component-num">02</div>
+        <div class="component-body">
+          <div class="component-title">アントレプレナーシップ研修</div>
+          <p class="component-desc">起業家 西良介氏による特別セミナー。「行動する力」と「自分でつくる生き方」について、リアルな経験をもとに学びます。</p>
+        </div>
+      </div>
+      <div class="component-card">
+        <div class="component-num">03</div>
+        <div class="component-body">
+          <div class="component-title">SNS研修</div>
+          <p class="component-desc">フォロワー6.5万人のインフルエンサーによる指導。自分の言葉で発信する力とコンテンツ制作のスキルを実践的に習得します。</p>
+        </div>
+      </div>
+      <div class="component-card">
+        <div class="component-num">04</div>
+        <div class="component-body">
+          <div class="component-title">インターン（観光 × マーケティング）</div>
+          <p class="component-desc">5日間のチームインターン。ダナンの観光地や企業をフィールドに、市場調査・分析・提案をチームで実施します。</p>
+        </div>
+      </div>
+      <div class="component-card">
+        <div class="component-num">05</div>
+        <div class="component-body">
+          <div class="component-title">Other Contents</div>
+          <p class="component-desc">ヨガ・ジャーナリング・ベトナム人学生との異文化交流など。心と体を整えながら、毎日の体験を深く振り返る時間を設けています。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -162,42 +231,39 @@
     <div class="sec-tag">RECOMMENDED FOR</div>
     <h2 class="sec-title">こんな人におすすめ</h2>
     <div class="checklist">
-      <div class="check-item">留学費用をできるだけ抑えたい</div>
-      <div class="check-item">語学と就業経験を同時に積みたい社会人・学生</div>
-      <div class="check-item">アジアのビジネス最前線を体験したい</div>
-      <div class="check-item">まだ知られていない穴場の留学先を探している</div>
-      <div class="check-item">ベトナム文化・グルメを楽しみたい</div>
-      <div class="check-item">短期間でコスパよく英語を鍛えたい</div>
+      <div class="check-item">「自分が何をしたいのか」まだわからない</div>
+      <div class="check-item">将来のキャリアや生き方を真剣に考えたい</div>
+      <div class="check-item">海外で新しい視点・価値観に触れたい</div>
+      <div class="check-item">発信力・SNSスキルを身につけたい</div>
+      <div class="check-item">同世代の女性と刺激し合いたい</div>
+      <div class="check-item">旅行とは違う、本物の海外体験がしたい</div>
     </div>
   </div>
 </section>
 
 <section class="sec" style="background:var(--white);">
   <div class="sec-inner">
-    <div class="sec-tag">PROGRAMS</div>
-    <h2 class="sec-title">プログラム例</h2>
-    <div class="prog-grid">
-      <div class="prog-card">
-        <div class="prog-head"><div class="prog-duration">SHORT TERM</div><div class="prog-name">2週間 集中英語コース</div></div>
-        <div class="prog-body">
-          <div class="prog-price">12〜18万円<span>（学費・宿泊・食費込）</span></div>
-          <ul class="prog-features"><li>午前：英語集中レッスン</li><li>午後：フリータイム・観光</li><li>市内中心部のホテル滞在</li></ul>
-        </div>
-      </div>
-      <div class="prog-card">
-        <div class="prog-head"><div class="prog-duration">STANDARD</div><div class="prog-name">1ヶ月 語学留学コース</div></div>
-        <div class="prog-body">
-          <div class="prog-price">20〜32万円<span>（学費・宿泊・食費込）</span></div>
-          <ul class="prog-features"><li>ビジネス英語コース対応</li><li>ホームステイも選択可</li><li>週末ホイアン・ハノイ小旅行</li></ul>
-        </div>
-      </div>
-      <div class="prog-card">
-        <div class="prog-head"><div class="prog-duration">SPECIAL</div><div class="prog-name">英語×インターンシッププログラム</div></div>
-        <div class="prog-body">
-          <div class="prog-price">要相談<span>（内容により変動）</span></div>
-          <ul class="prog-features"><li>午前：語学学習</li><li>午後：現地企業でインターン</li><li>履歴書・キャリア相談付き</li></ul>
-        </div>
-      </div>
+    <div class="sec-tag">SCHEDULE</div>
+    <h2 class="sec-title">開催スケジュール</h2>
+    <table class="schedule-table">
+      <thead><tr><th>回</th><th>日程</th><th>状況</th></tr></thead>
+      <tbody>
+        <tr><td>2026年 夏開催</td><td>2026年8月26日（水）〜 9月8日（火）</td><td>募集予定</td></tr>
+        <tr><td>2026年 春開催</td><td>調整中</td><td>公式LINEにて告知</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--bg1);">
+  <div class="sec-inner">
+    <div class="sec-tag">PRICING</div>
+    <h2 class="sec-title">費用について</h2>
+    <div class="price-box">
+      <div class="price-box-row"><span class="price-box-label">プログラム費（朝食込）</span><span class="price-box-val">¥120,000</span></div>
+      <div class="price-box-row"><span class="price-box-label">宿泊費（2週間）</span><span class="price-box-val">約¥30,000〜33,000</span></div>
+      <div class="price-box-row"><span class="price-box-label">渡航費・現地食費</span><span class="price-box-val">別途実費</span></div>
+      <div class="price-box-row"><span class="price-box-label">合計目安</span><span class="price-box-val">約¥15万〜（渡航費別）</span></div>
     </div>
   </div>
 </section>
@@ -205,8 +271,8 @@
 <section id="country-cta" class="sec">
   <div class="sec-inner">
     <div class="sec-tag" style="background:rgba(255,255,255,.15);color:var(--acc);">GET STARTED</div>
-    <h2 class="sec-title">ダナン留学を検討中ですか？</h2>
-    <p class="sec-lead">まずは無料相談から。費用・期間・おすすめ学校など、詳しく教えます。</p>
+    <h2 class="sec-title">興味がある方はまずご相談を</h2>
+    <p class="sec-lead">募集状況・詳細スケジュール・費用についてはLINEまたはお問い合わせフォームからお気軽にどうぞ。</p>
     <div class="cta-btns">
       <a href="https://lin.ee/tZyufz4" class="btn-acc" target="_blank" rel="noopener">LINEで無料相談する</a>
       <a href="index.html#contact" class="btn-wh">資料請求フォームへ</a>
