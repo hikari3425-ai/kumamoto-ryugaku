@@ -95,15 +95,17 @@
     }
     .hero-badge::before { content: '✦'; color: var(--acc); }
     .hero-h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
       font-weight: 800; color: var(--white);
-      line-height: 1.2; margin-bottom: 20px;
+      line-height: 1.25; margin-bottom: 16px;
       letter-spacing: .02em;
+      text-shadow: 0 2px 16px rgba(0,0,0,.55);
     }
     .hero-h1 .accent { color: var(--acc); }
     .hero-sub {
-      font-size: clamp(.95rem, 1.8vw, 1.15rem);
-      color: rgba(255,255,255,.85); margin-bottom: 36px; line-height: 1.6;
+      font-size: clamp(.88rem, 1.4vw, 1rem);
+      color: rgba(255,255,255,.9); margin-bottom: 32px; line-height: 1.65;
+      text-shadow: 0 1px 8px rgba(0,0,0,.45);
     }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
     .hero-btn-primary {
@@ -418,7 +420,8 @@
       #header { padding: 0 24px; }
       .nav-links, .header-ctas { display: none; }
       .hamburger { display: flex; }
-      .hero-content { padding: 0 5% 0 0; }
+      #hero { justify-content: flex-start; align-items: flex-end; }
+      .hero-content { padding: 0 6% 12% 6%; max-width: 100%; }
       .problems-grid, .reasons-grid, .rep-grid, .contact-channels { grid-template-columns: 1fr; }
       .reasons-img { display: none; }
       .voices-grid { grid-template-columns: 1fr; }
@@ -430,8 +433,12 @@
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
     }
     @media (max-width: 480px) {
-      .hero-h1 { font-size: 2rem; }
-      .hero-btns { flex-direction: column; }
+      .hero-h1 { font-size: 1.45rem; line-height: 1.3; margin-bottom: 10px; }
+      .hero-sub { font-size: .82rem; margin-bottom: 20px; line-height: 1.55; }
+      .hero-badge { font-size: .72rem; padding: 5px 12px; margin-bottom: 14px; }
+      .hero-btns { flex-direction: row; gap: 10px; flex-wrap: wrap; }
+      .hero-btn-primary { padding: 11px 22px; font-size: .88rem; }
+      .hero-btn-secondary { padding: 10px 20px; font-size: .88rem; }
       .country-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
