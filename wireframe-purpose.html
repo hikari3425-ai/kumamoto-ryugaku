@@ -23,12 +23,6 @@
 
 body { font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif; color: var(--txt); line-height: 1.7; }
 
-.wf-bar {
-  background: #fff3cd; border-bottom: 2px dashed #f0ad4e;
-  padding: 6px 20px; font-size: 11px; font-weight: 700; color: #856404;
-  text-align: center; letter-spacing: .05em;
-}
-
 header {
   background: rgba(255,255,255,.97); border-bottom: 1px solid var(--border);
   height: 64px; display: flex; align-items: center; padding: 0 40px; gap: 24px;
@@ -44,9 +38,8 @@ section { padding: 64px 40px; }
 .sec-label { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--sub); margin-bottom: 10px; }
 .sec-title { font-size: 26px; font-weight: 700; color: var(--txt); margin-bottom: 10px; line-height: 1.4; }
 .sec-sub { font-size: 14px; color: var(--sub); line-height: 1.9; }
-.img-placeholder { background: var(--bg1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--sub); font-size: 12px; font-weight: 600; }
 
-/* ── PURPOSE NAV (他目的への横断ナビ) ── */
+/* ── PURPOSE NAV ── */
 .purpose-nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 40px; display: flex; gap: 0; }
 .pnav-item { padding: 14px 24px; font-size: 13px; font-weight: 700; color: var(--sub); cursor: pointer; border-bottom: 3px solid transparent; text-decoration: none; display: block; }
 .pnav-item:hover { color: var(--pri); }
@@ -66,13 +59,15 @@ section { padding: 64px 40px; }
 .ph-btns { display: flex; gap: 12px; }
 .btn-main { background: var(--acc); color: #fff; border: none; padding: 14px 28px; border-radius: 20px; font-size: 15px; font-weight: 700; cursor: pointer; }
 .btn-sub { background: transparent; color: var(--pri); border: 2px solid var(--pri); padding: 14px 24px; border-radius: 20px; font-size: 15px; font-weight: 700; cursor: pointer; }
-.ph-img { height: 320px; }
+.ph-img { height: 320px; border-radius: 16px; overflow: hidden; }
+.ph-img img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ── WHAT IS IT ── */
 #what { background: var(--white); }
 .what-wrap { display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: center; margin-top: 40px; }
 .what-body { font-size: 15px; color: var(--sub); line-height: 2; }
-.what-img { height: 300px; }
+.what-img { height: 300px; border-radius: 16px; overflow: hidden; }
+.what-img img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ── MERITS ── */
 #merits { background: linear-gradient(150deg, var(--bg1) 0%, var(--bg2) 100%); }
@@ -96,7 +91,8 @@ section { padding: 64px 40px; }
 .country-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 40px; }
 .country-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: var(--txt); transition: transform .15s; display: block; }
 .country-card:hover { transform: translateY(-3px); }
-.country-img { height: 100px; }
+.country-img { height: 100px; overflow: hidden; }
+.country-img img { width: 100%; height: 100%; object-fit: cover; }
 .country-info { padding: 12px; }
 .country-flag { font-size: 20px; margin-bottom: 4px; }
 .country-name { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
@@ -159,29 +155,26 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
 </head>
 <body>
 
-<div class="wf-bar">WIREFRAME ― 目的別ページテンプレート（長期留学を代表例として表示）</div>
-
 <header>
-  <a href="wireframe.html" class="logo">くまもと留学室</a>
+  <a href="index.html" class="logo">くまもと留学室</a>
   <nav>
-    <a href="wireframe.html#programs">国から探す</a>
-    <a href="wireframe.html#programs">目的別</a>
-    <a href="wireframe.html#programs">年代別</a>
-    <a href="wireframe.html#faq">よくある質問</a>
-    <a href="wireframe.html#founder">代表について</a>
+    <a href="index.html#programs">国から探す</a>
+    <a href="wireframe-purpose.html">目的別</a>
+    <a href="index.html#faq">よくある質問</a>
+    <a href="story.html">代表について</a>
   </nav>
-  <button class="header-cta">無料相談</button>
+  <button class="header-cta" onclick="location.href='https://lin.ee/tZyufz4'">無料相談</button>
 </header>
 
 <div class="breadcrumb">
-  <a href="wireframe.html">トップ</a> ＞ <a href="wireframe.html#programs">目的から探す</a> ＞ 長期留学
+  <a href="index.html">トップ</a> ＞ <a href="wireframe-purpose.html">目的から探す</a> ＞ 長期留学
 </div>
 
 <nav class="purpose-nav">
-  <a href="#" class="pnav-item">短期留学</a>
-  <a href="#" class="pnav-item active">長期留学</a>
-  <a href="#" class="pnav-item">インターンシップ</a>
-  <a href="#" class="pnav-item">ボランティア</a>
+  <a href="short.html" class="pnav-item">短期留学</a>
+  <a href="wireframe-purpose.html" class="pnav-item active">長期留学</a>
+  <a href="intern.html" class="pnav-item">インターンシップ</a>
+  <a href="volunteer.html" class="pnav-item">ボランティア</a>
 </nav>
 
 <!-- HERO -->
@@ -197,10 +190,12 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
     </p>
     <div class="ph-btns">
       <button class="btn-main" onclick="document.getElementById('purpose-cta').scrollIntoView({behavior:'smooth'})">長期留学を相談する →</button>
-      <button class="btn-sub">資料を受け取る</button>
+      <button class="btn-sub" onclick="location.href='index.html#contact'">資料を受け取る</button>
     </div>
   </div>
-  <div class="ph-img img-placeholder">長期留学のイメージ写真<br>（現地生活・友人・街）</div>
+  <div class="ph-img">
+    <img src="images/hawaii-school.jpg" alt="長期留学イメージ" loading="lazy" />
+  </div>
 </section>
 
 <!-- WHAT IS IT -->
@@ -213,7 +208,9 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
       短期留学が「英語に触れる体験」であるのに対し、長期留学は「英語で生活する日常」。友人をつくり、現地の文化を体で感じ、自分が変わっていく実感を得られます。<br><br>
       くまもと留学室では、目的・予算・英語レベルに合わせて3ヶ月から1年以上のプランを一緒に設計します。
     </div>
-    <div class="what-img img-placeholder">長期留学イメージ写真</div>
+    <div class="what-img">
+      <img src="images/hawaii-school.jpg" alt="長期留学イメージ" loading="lazy" />
+    </div>
   </div>
 </section>
 
@@ -287,40 +284,40 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
   <h2 class="sec-title">長期留学におすすめの国</h2>
   <p class="sec-sub">目的・予算・英語レベルに合わせて選べます。</p>
   <div class="country-grid">
-    <a href="wireframe-country.html" class="country-card">
-      <div class="country-img img-placeholder">セブ島写真</div>
+    <a href="cebu.html" class="country-card">
+      <div class="country-img"><img src="images/cebu.jpg" alt="セブ島" loading="lazy" /></div>
       <div class="country-info">
         <div class="country-flag">🇵🇭</div>
         <div class="country-name">セブ島（フィリピン）</div>
         <div class="country-period">1〜6ヶ月</div>
       </div>
     </a>
-    <a href="wireframe-country.html" class="country-card">
-      <div class="country-img img-placeholder">ハワイ写真</div>
+    <a href="hawaii.html" class="country-card">
+      <div class="country-img"><img src="images/hawaii-school.jpg" alt="ハワイ" loading="lazy" /></div>
       <div class="country-info">
         <div class="country-flag">🇺🇸</div>
         <div class="country-name">ハワイ（アメリカ）</div>
         <div class="country-period">3ヶ月〜1年</div>
       </div>
     </a>
-    <a href="wireframe-country.html" class="country-card">
-      <div class="country-img img-placeholder">フィジー写真</div>
+    <a href="fiji.html" class="country-card">
+      <div class="country-img"><img src="images/fiji.jpg" alt="フィジー" loading="lazy" /></div>
       <div class="country-info">
         <div class="country-flag">🇫🇯</div>
         <div class="country-name">フィジー</div>
         <div class="country-period">1〜6ヶ月</div>
       </div>
     </a>
-    <a href="wireframe-country.html" class="country-card">
-      <div class="country-img img-placeholder">バリ写真</div>
+    <a href="bali.html" class="country-card">
+      <div class="country-img"><img src="images/bali2.jpg" alt="バリ" loading="lazy" /></div>
       <div class="country-info">
         <div class="country-flag">🇮🇩</div>
         <div class="country-name">バリ（インドネシア）</div>
         <div class="country-period">1〜3ヶ月</div>
       </div>
     </a>
-    <a href="wireframe-country.html" class="country-card">
-      <div class="country-img img-placeholder">ダナン写真</div>
+    <a href="danang.html" class="country-card">
+      <div class="country-img"><img src="images/danang-intern2.jpg" alt="ダナン" loading="lazy" /></div>
       <div class="country-info">
         <div class="country-flag">🇻🇳</div>
         <div class="country-name">ダナン（ベトナム）</div>
@@ -339,13 +336,13 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
       <div class="tl-dot">💬</div>
       <div class="tl-month">STEP 1</div>
       <div class="tl-title">無料相談</div>
-      <div class="tl-body">LINEまたはビデオ通話で目的・予算・期間をヒアリング</div>
+      <div class="tl-body">ZoomまたはLINEビデオ通話、もしくは熊本大学近くのオフィスでお話しします</div>
     </div>
     <div class="tl-step">
       <div class="tl-dot">🧠</div>
       <div class="tl-month">STEP 2</div>
       <div class="tl-title">プランニング</div>
-      <div class="tl-body">心理士が自己分析をサポート。国・学校・プランを提案</div>
+      <div class="tl-body">留学経験ありのカウンセラーが、あなたに合う留学プランを提案</div>
     </div>
     <div class="tl-step">
       <div class="tl-dot">📝</div>
@@ -382,7 +379,7 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
         </div>
       </div>
       <div class="voice-stars">★★★★★</div>
-      <div class="voice-text">英語ゼロで行きましたが、6ヶ月でビジネスメールが書けるようになりました。帰国後の就活では「海外経験があります」と堂々と言えて、第一志望の企業に内定。留学前後で別人みたいに変わりました。</div>
+      <div class="voice-text">英語ゼロで行きましたが、6ヶ月で英語でプレゼンできるようになりました。帰国後の就活では「海外経験があります」と堂々と言えて、第一志望の企業に内定。留学前後で別人みたいに変わりました。</div>
       <div class="voice-tag">🇵🇭 長期留学 / 大学生</div>
     </div>
     <div class="voice-card">
@@ -405,8 +402,8 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
   <h2 class="cta-h2">長期留学について、まず相談してみませんか？</h2>
   <p class="cta-sub">「行けるかどうかわからない」段階でのご相談も大歓迎です。費用は一切かかりません。</p>
   <div class="cta-btns">
-    <button class="cta-btn-main">💬 LINEで相談する</button>
-    <button class="cta-btn-sub">📄 無料資料を請求する</button>
+    <button class="cta-btn-main" onclick="location.href='https://lin.ee/tZyufz4'">💬 LINEで相談する</button>
+    <button class="cta-btn-sub" onclick="location.href='index.html#contact'">📄 無料資料を請求する</button>
   </div>
 </section>
 
@@ -417,10 +414,10 @@ footer { background: var(--txt); color: rgba(255,255,255,.7); padding: 40px; fon
       <div>© 2025 くまもと留学室</div>
     </div>
     <nav class="footer-nav">
-      <a href="wireframe.html">トップ</a>
-      <a href="wireframe.html#programs">プログラム</a>
-      <a href="wireframe.html#contact">お問い合わせ</a>
-      <a href="wireframe.html#faq">よくある質問</a>
+      <a href="index.html">トップ</a>
+      <a href="index.html#programs">プログラム</a>
+      <a href="index.html#contact">お問い合わせ</a>
+      <a href="index.html#faq">よくある質問</a>
     </nav>
   </div>
 </footer>
