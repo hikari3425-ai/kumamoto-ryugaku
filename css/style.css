@@ -1,38 +1,13 @@
 /* ============================================================
    WABITABI — Company Website Stylesheet
-   カラーシステム:
-     水色 / 白    → 海外感・グローバル
-     深緑 / 緑    → 熊本・地方・自然
-     黄色 / オレンジ → 明るい未来・エネルギー
+   色はテーマファイルで定義 (css/theme-01.css / css/theme-02.css)
+   このファイルはレイアウト・コンポーネントのみ
    ============================================================ */
 
 /* ------------------------------------------------------------
-   Custom Properties (Design Tokens)
+   Non-color Design Tokens (shared across all themes)
    ------------------------------------------------------------ */
 :root {
-  /* Brand Colors */
-  --sky:         #5BC4E8;   /* 水色 */
-  --sky-light:   #EAF7FD;
-  --sky-dark:    #2EA8D0;
-
-  --forest:      #1C4A35;   /* 深緑 */
-  --green:       #3D8B6F;   /* 緑 */
-  --green-light: #EBF5F0;
-  --green-pale:  #D0EBE1;
-
-  --yellow:      #FFD166;   /* 黄色 */
-  --orange:      #F4845F;   /* オレンジ */
-  --orange-dark: #E06040;
-
-  --white:       #FFFFFF;
-  --off-white:   #F7F9FB;
-  --gray-100:    #F0F2F5;
-  --gray-200:    #E2E6EB;
-  --gray-400:    #9BA8B4;
-  --gray-600:    #5C6B78;
-  --gray-800:    #2C3A45;
-  --black:       #111820;
-
   /* Typography */
   --font-sans:   'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
   --font-serif:  'Noto Serif JP', 'Hiragino Mincho ProN', serif;
@@ -264,7 +239,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--forest) 0%, var(--green) 50%, var(--sky-dark) 100%);
+  background: var(--hero-gradient);
   padding-top: 68px;
 }
 
@@ -282,11 +257,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(28, 74, 53, .78) 0%,
-    rgba(91, 196, 232, .35) 100%
-  );
+  background: var(--hero-overlay);
 }
 
 .hero-content {
